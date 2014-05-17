@@ -2,7 +2,6 @@ package pt.jeknowledge.morsecode101;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -48,8 +47,6 @@ public class MainActivity extends Activity {
 			
 		}
 			
-			
-		
 		
 		String afterConcat = after[0];
 		
