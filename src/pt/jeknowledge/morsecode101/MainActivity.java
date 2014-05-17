@@ -18,7 +18,7 @@ public class MainActivity extends Activity {
 		
 		final Button button= (Button) findViewById(R.id.refreshButton);
 		final TextView settext = (TextView) findViewById(R.id.textView);
-		final EditText rectext = (EditText) findViewById(R.id.editText);
+		final EditText rectext = (EditText) findViewById(R.id.editText1);
 		
 		
 		
@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
 		    @Override
 		    public void onClick(View v) {
 		    	
-		    	String before = (String) settext.getText();
+		    	String before = rectext.getText().toString();
 		    	String after = convertToMorse(before);
 		    	settext.setText(after);
 		    	
@@ -36,21 +36,28 @@ public class MainActivity extends Activity {
 
 	private String convertToMorse(String before) {
 	
-		
-		
+			
 		String [] after  = new String [before.length()];
 		
 		for(int i = 0; i <before.length(); i++){
 			
 			
-			after[i] = Alphabet.getEquiv(before.charAt(i));
+			after[i] = "A";
 			
 			
 		}
 			
+			
 		
 		
-		String afterConcat = null;
+		String afterConcat = after[0];
+		
+		for(int i = 1; i < before.length(); i++){
+			
+			afterConcat = afterConcat + after[i];
+			
+		}
+		
 		return afterConcat;
 	}
 	
