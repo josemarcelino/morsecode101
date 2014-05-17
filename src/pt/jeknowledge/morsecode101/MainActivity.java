@@ -16,6 +16,8 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		
+		
+		
 		final Button button= (Button) findViewById(R.id.refreshButton);
 		final TextView settext = (TextView) findViewById(R.id.textView);
 		final EditText rectext = (EditText) findViewById(R.id.editText1);
@@ -36,14 +38,13 @@ public class MainActivity extends Activity {
 
 	private String convertToMorse(String before) {
 	
-			
+		Alphabet Acreated = new Alphabet();	
 		String [] after  = new String [before.length()];
 		
 		for(int i = 0; i <before.length(); i++){
 			
 			
-			after[i] = "A";
-			
+			after[i] = Acreated.getEquiv(before.charAt(i));
 			
 		}
 			
