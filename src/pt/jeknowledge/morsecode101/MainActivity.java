@@ -14,11 +14,13 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		final Button button= (Button) findViewById(R.id.refreshButton);
+		final Button tobutton= (Button) findViewById(R.id.tomorseButton);
+		final Button frombutton = (Button) findViewById(R.id.frommorseButton);
+		
 		final TextView settext = (TextView) findViewById(R.id.textView);
 		final EditText rectext = (EditText) findViewById(R.id.editText1);
 		
-		button.setOnClickListener(new View.OnClickListener() {
+		tobutton.setOnClickListener(new View.OnClickListener() {
 		    @Override
 		    public void onClick(View v) {
 		    	
@@ -51,4 +53,5 @@ public class MainActivity extends Activity {
 		
 		return afterConcat;
 	}
+	
 }

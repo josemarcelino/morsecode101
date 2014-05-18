@@ -17,15 +17,6 @@
         android:text=""
         android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/refreshButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="64dp"
-        android:text="Codificar" />
-
     <EditText
         android:id="@+id/editText1"
         android:layout_width="wrap_content"
@@ -39,5 +30,22 @@
 
         <requestFocus />
     </EditText>
+
+    <Button
+        android:id="@+id/frommorseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tomorseButton"
+        android:layout_alignParentRight="true"
+        android:text="Descodificar" />
+
+    <Button
+        android:id="@+id/tomorseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="76dp"
+        android:text="Codificar" />
 
 </RelativeLayout>
