@@ -30,6 +30,18 @@ public class MainActivity extends Activity {
 		    	
 		    }
 		});
+		
+		frombutton.setOnClickListener(new View.OnClickListener() {
+		    @Override
+		    public void onClick(View v) {
+		    	
+		    	String before = rectext.getText().toString();
+		    	String after = convertFromMorse(before);
+		    	settext.setText(after);
+		    	
+		    }
+		});
+		
 	}
 
 	private String convertToMorse(String before) {
@@ -52,6 +64,11 @@ public class MainActivity extends Activity {
 		}
 		
 		return afterConcat;
+	}
+	
+	private String convertFromMorse(String before) {
+		// 
+		return null;
 	}
 	
 }

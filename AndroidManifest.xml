@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="pt.jeknowledge.morsecode101.MainActivity"
-            android:label="@string/title_activity_main" >
+            android:label="Morse Code 101" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
