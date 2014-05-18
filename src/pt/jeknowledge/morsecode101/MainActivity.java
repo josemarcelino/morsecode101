@@ -20,12 +20,14 @@ public class MainActivity extends Activity {
 		final TextView settext = (TextView) findViewById(R.id.textView);
 		final EditText rectext = (EditText) findViewById(R.id.editText1);
 		
+		final Alphabet Acreated = new Alphabet();	
+		
 		tobutton.setOnClickListener(new View.OnClickListener() {
 		    @Override
 		    public void onClick(View v) {
 		    	
 		    	String before = rectext.getText().toString();
-		    	String after = convertToMorse(before);
+		    	String after = convertToMorse(before,Acreated);
 		    	settext.setText(after);
 		    	
 		    }
@@ -36,7 +38,7 @@ public class MainActivity extends Activity {
 		    public void onClick(View v) {
 		    	
 		    	String before = rectext.getText().toString();
-		    	String after = convertFromMorse(before);
+		    	String after = convertFromMorse(before, Acreated);
 		    	settext.setText(after);
 		    	
 		    }
@@ -44,14 +46,13 @@ public class MainActivity extends Activity {
 		
 	}
 
-	private String convertToMorse(String before) {
-	
-		Alphabet Acreated = new Alphabet();	
+	private String convertToMorse(String before, Alphabet Acreated) {
+		
 		String [] after  = new String [before.length()];
 		
 		for(int i = 0; i <before.length(); i++){
 				
-			after[i] = Acreated.getEquiv(before.charAt(i));
+			after[i] = Acreated.getEquivToMorse(before.charAt(i));
 			
 		}
 			
@@ -66,9 +67,21 @@ public class MainActivity extends Activity {
 		return afterConcat;
 	}
 	
-	private String convertFromMorse(String before) {
-		// 
-		return null;
+	private String convertFromMorse(String before, Alphabet Acreated) {
+		
+		String [] after  = new String [before.length()];
+		
+		
+		
+		String afterConcat = after[0];
+		
+		for(int i = 1; i < before.length(); i++){
+			
+			afterConcat = afterConcat + after[i];
+			
+		}
+		
+		return afterConcat;
 	}
 	
 }
