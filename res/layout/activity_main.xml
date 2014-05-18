@@ -14,7 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="@string/hello_world" />
+        android:text=""
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/refreshButton"
@@ -33,6 +34,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="42dp"
         android:ems="10"
+        android:hint="Escreve aqui o texto que desejas traduzir para morse"
         android:inputType="textMultiLine" >
 
         <requestFocus />

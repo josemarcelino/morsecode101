@@ -14,14 +14,9 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		
-		
-		
 		final Button button= (Button) findViewById(R.id.refreshButton);
 		final TextView settext = (TextView) findViewById(R.id.textView);
 		final EditText rectext = (EditText) findViewById(R.id.editText1);
-		
-		
 		
 		button.setOnClickListener(new View.OnClickListener() {
 		    @Override
@@ -41,13 +36,11 @@ public class MainActivity extends Activity {
 		String [] after  = new String [before.length()];
 		
 		for(int i = 0; i <before.length(); i++){
-			
-			
+				
 			after[i] = Acreated.getEquiv(before.charAt(i));
 			
 		}
 			
-		
 		String afterConcat = after[0];
 		
 		for(int i = 1; i < before.length(); i++){
@@ -58,5 +51,4 @@ public class MainActivity extends Activity {
 		
 		return afterConcat;
 	}
-	
 }
