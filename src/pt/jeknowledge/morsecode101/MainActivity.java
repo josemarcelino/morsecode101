@@ -15,11 +15,9 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		final Button tobutton= (Button) findViewById(R.id.tomorseButton);
-		final Button frombutton = (Button) findViewById(R.id.frommorseButton);
-		
+		final Button frombutton = (Button) findViewById(R.id.frommorseButton);	
 		final TextView settext = (TextView) findViewById(R.id.textView);
 		final EditText rectext = (EditText) findViewById(R.id.editText1);
-		
 		final Alphabet Acreated = new Alphabet();	
 		
 		tobutton.setOnClickListener(new View.OnClickListener() {
@@ -43,7 +41,6 @@ public class MainActivity extends Activity {
 		    	
 		    }
 		});
-		
 	}
 
 	private String convertToMorse(String before, Alphabet Acreated) {
@@ -71,7 +68,11 @@ public class MainActivity extends Activity {
 		
 		String [] after  = new String [before.length()];
 		
-		
+		for(int i = 0; i <before.length(); i++){
+			
+			// missing data
+			
+		}
 		
 		String afterConcat = after[0];
 		
@@ -82,6 +83,5 @@ public class MainActivity extends Activity {
 		}
 		
 		return afterConcat;
-	}
-	
+	}	
 }
