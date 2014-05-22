@@ -2,6 +2,7 @@ package pt.jeknowledge.morsecode101;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -48,7 +49,7 @@ public class MainActivity extends Activity {
 		String [] after  = new String [before.length()];
 		
 		for(int i = 0; i <before.length(); i++){
-				
+			
 			after[i] = Acreated.getEquivToMorse(before.charAt(i));
 			
 		}
@@ -57,7 +58,9 @@ public class MainActivity extends Activity {
 		
 		for(int i = 1; i < before.length(); i++){
 			
-			afterConcat = afterConcat + after[i];
+			if(after[i] != null){
+				afterConcat = afterConcat + after[i];
+			}
 			
 		}
 		
@@ -65,21 +68,42 @@ public class MainActivity extends Activity {
 	}
 	
 	private String convertFromMorse(String before, Alphabet Acreated) {
-		
+
 		String [] after  = new String [before.length()];
 		
-		for(int i = 0; i <before.length(); i++){
+		int start = 0;
+		int finish = 0;
+		
+		while(finish  != before.length()){
 			
-			// missing data
+			if(before.charAt(finish) == '/'){
+				
+				after[start]= before.substring(start, finish);
+				start = finish+1;
+			}
+		
+			finish++;
 			
 		}
+		
+		after[start]= before.substring(start, before.length());
+		
+		for(int i = 0; i < before.length(); i++){
+		
+			if(after[i] != null){
+				after[i] = Acreated.getEquivFromMorse(after[i]);
+			}
+		
+		}
+		
 		
 		String afterConcat = after[0];
 		
 		for(int i = 1; i < before.length(); i++){
 			
-			afterConcat = afterConcat + after[i];
-			
+			if(after[i] != null){
+				afterConcat = afterConcat + after[i];
+			}
 		}
 		
 		return afterConcat;

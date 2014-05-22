@@ -15,7 +15,9 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text=""
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textIsSelectable = "true"
+         />
 
     <EditText
         android:id="@+id/editText1"
