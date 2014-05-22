@@ -2,7 +2,6 @@ package pt.jeknowledge.morsecode101;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -83,7 +82,6 @@ public class MainActivity extends Activity {
 			}
 		
 			finish++;
-			
 		}
 		
 		after[start]= before.substring(start, before.length());
@@ -93,7 +91,6 @@ public class MainActivity extends Activity {
 			if(after[i] != null){
 				after[i] = Acreated.getEquivFromMorse(after[i]);
 			}
-		
 		}
 		
 		
@@ -102,7 +99,7 @@ public class MainActivity extends Activity {
 		for(int i = 1; i < before.length(); i++){
 			
 			if(after[i] != null){
-				afterConcat = afterConcat + after[i];
+				afterConcat = afterConcat + ' ' +after[i];
 			}
 		}
 		

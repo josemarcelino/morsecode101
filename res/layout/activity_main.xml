@@ -27,7 +27,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="42dp"
         android:ems="10"
-        android:hint="Escreve aqui o texto que desejas traduzir para morse"
+        android:hint="@string/Intro"
         android:inputType="textMultiLine" >
 
         <requestFocus />
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/tomorseButton"
         android:layout_alignParentRight="true"
-        android:text="Descodificar" />
+        android:text="@string/Descodificar" />
 
     <Button
         android:id="@+id/tomorseButton"
@@ -48,6 +48,6 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/textView"
         android:layout_marginTop="76dp"
-        android:text="Codificar" />
+        android:text="@string/Codificar" />
 
 </RelativeLayout>
